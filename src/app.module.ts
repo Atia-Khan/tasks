@@ -8,7 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }), 
-    MongooseModule.forRoot(process.env.TASKS_DATABASE_URL),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
     TasksModule],
   controllers: [AppController],
   providers: [AppService],

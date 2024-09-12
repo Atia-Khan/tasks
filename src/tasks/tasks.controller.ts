@@ -7,13 +7,13 @@ export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 
   // Create a new task
-  @Post('/add')
+  @Post()
   async create(@Body() taskDto: TaskDto) {
     return this.tasksService.create(taskDto);
   }
 
   // Get all tasks
-  @Get('/get')
+  @Get()
   async findAll() {
     return this.tasksService.findAll();
   }
