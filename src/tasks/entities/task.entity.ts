@@ -20,6 +20,9 @@ export class Tasks {
   @Prop({ required: true })
   created_by_name: string;
 
+  @Prop({ default: '' }) 
+  description: string;
+
   @Prop({ required: true })
   estimated_hours: number;
 
